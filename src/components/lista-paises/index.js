@@ -1,14 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
+import Tarjeta from "../tarjetas";
+import { Peligro } from "../text";
 
 const listaPaises = props => {
   return (
     <div>
       Lista de Paises
       {props.paisesEncontrados.length ? (
-        <div>Tengo</div>
+        <div>
+          {props.paisesEncontrados.map(( pais, key ) => (
+            <Tarjeta key={key} titulo={pais.name} fecha={pais.nativeName} descripcion={pais.region} />
+          ))}
+        </div>
       ) : (
-        <div>No tengo</div>
+        <Peligro>No tengo</Peligro>
       )}
     </div>
   );

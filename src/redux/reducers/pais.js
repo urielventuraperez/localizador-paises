@@ -27,7 +27,7 @@ function reducer(state = initialState, action) {
           cargando: false
         },
         {
-          arbitrosTorneo: action.payload
+          pais: action.payload
         }
       );
     default:

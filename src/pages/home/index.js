@@ -1,22 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { ConnectedRouter } from "connected-react-router";
-import Routes from "../../routes";
 import InputPaises from "../../components/buscar-paises";
 import ListaPaises from "../../components/lista-paises";
+import { Titulo } from "../../components/text";
 
-const Home = ({ history }) => {
+const Home = () => {
   return (
-    <ConnectedRouter history={history}>
-      {Routes}
+    <div>
+      <Titulo>Mi Localizador de Paises</Titulo>
       <InputPaises/>
       <ListaPaises />
-    </ConnectedRouter>
+    </div>
   );
-};
-
-Home.propTypes = {
-  history: PropTypes.object
 };
 
 export default Home;
